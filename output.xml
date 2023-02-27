@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230227 16:24:22.598" rpa="false" schemaversion="3">
+<suite id="s1" name="Teste" source="C:\Users\fagwe\OneDrive\Área de Trabalho\RobotProjeto\teste.robot">
+<test id="s1-t1" name="Cenario 1: Executar video no site do youtube" line="44">
+<kw name="Given que eu esteja no site do youtube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${brownser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230227 16:24:24.721" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230227 16:24:24.720" endtime="20230227 16:24:31.747"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230227 16:24:31.748" endtime="20230227 16:24:32.097"/>
+</kw>
+<kw name="Start Gif Recording" library="ScreenCapLibrary">
+<doc>Starts the recording of a GIF in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Gif Recording` keyword.</doc>
+<status status="PASS" starttime="20230227 16:24:32.097" endtime="20230227 16:24:32.101"/>
+</kw>
+<status status="PASS" starttime="20230227 16:24:24.720" endtime="20230227 16:24:32.101"/>
+</kw>
+<kw name="When digito o nome da musica">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_pesquisa}</arg>
+<arg>${nomedamusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230227 16:24:32.107" level="INFO">Typing text 'Ariana Grande' into text field 'xpath= //input[@id="search"]'.</msg>
+<status status="PASS" starttime="20230227 16:24:32.105" endtime="20230227 16:24:36.484"/>
+</kw>
+<status status="PASS" starttime="20230227 16:24:32.104" endtime="20230227 16:24:36.485"/>
+</kw>
+<kw name="And clico no botao buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${buttons_pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 16:24:36.488" level="INFO">Clicking element 'xpath= //*[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20230227 16:24:36.487" endtime="20230227 16:24:36.986"/>
+</kw>
+<status status="PASS" starttime="20230227 16:24:36.486" endtime="20230227 16:24:36.987"/>
+</kw>
+<kw name="And clico na primeira opcao da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${primeiro}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230227 16:24:36.990" endtime="20230227 16:24:38.673"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 16:24:38.674" level="INFO">Clicking element 'xpath= //*[@id="video-title"]/yt-formatted-string'.</msg>
+<status status="PASS" starttime="20230227 16:24:38.673" endtime="20230227 16:24:39.340"/>
+</kw>
+<status status="PASS" starttime="20230227 16:24:36.990" endtime="20230227 16:24:39.340"/>
+</kw>
+<kw name="Then o video e executado">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230227 16:24:39.350" endtime="20230227 16:24:41.828"/>
+</kw>
+<kw name="Stop Gif Recording" library="ScreenCapLibrary">
+<doc>Stops the GIF recording and generates the file. If ``embed`` argument was set to ``True`` the
+GIF will be displayed in the log file. Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the
+video will be embedded and available in the log file only.</doc>
+<msg timestamp="20230227 16:24:43.525" level="INFO" html="true">&lt;a href="screenshot_1.gif"&gt;&lt;img src="screenshot_1.gif" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230227 16:24:41.829" endtime="20230227 16:24:43.527"/>
+</kw>
+<status status="PASS" starttime="20230227 16:24:39.349" endtime="20230227 16:24:43.527"/>
+</kw>
+<status status="PASS" starttime="20230227 16:24:24.718" endtime="20230227 16:24:43.528"/>
+</test>
+<status status="PASS" starttime="20230227 16:24:22.601" endtime="20230227 16:24:43.530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
